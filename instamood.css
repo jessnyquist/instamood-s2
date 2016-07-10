@@ -1,0 +1,35 @@
+ul {
+	list-style: none;
+}
+.entry{
+	float: left;
+	width: 33%;
+	display: inline-block;
+	height: 400px;
+	position: relative;
+}
+.photograph{
+	background-color: rgba(0,0,0, .4);
+}
+.picture {
+	height: 250px;
+	width: 250px;
+	margin-left:50%;
+	transform: translate(-50%,0);
+	text-shadow: .7;
+}
+.pictext{
+	text-align: center;
+}
+
+@media(max-width:1000px){
+	.entry{
+		width: 50%;
+	}
+}
+
+@media(max-width: 600px){
+	.entry{
+		width:100%;
+	}
+}
