@@ -23,19 +23,21 @@
         <a ng-click="getInstaPics()">Load pictures!</a>
         <div class="statsbox">
         	<h1>Jess's Stats</h1>
-        	<p>Ego Score: {{ ego }}</p>
+        	<p>Ego Score: {{ ego }}%</p>
         	<p>Popularity: {{ average }}</p>
-        	<p>Active days: {{}}</p>
+        	<p>Active days: {{ days}}</p>
         	<p>Brevity: {{ brevity }}</p>
         	<p>Visibility Thirst: {{ hashtag }}</p>
+        	<p>Overall Positivity: {{posScore / picArray.length}}</p>
         </div>
         <ul>
         	<li ng-repeat="pic in picArray track by $index">
         		<div class="entry">
         			<div class="photograph">
-        				<img class="picture" src="{{pic.images.standard_resolution.url}}">
+        				<img class="picture" ng-src="{{pic.images.standard_resolution.url}}">
         			</div>
         			<p class ="pictext">{{pic.caption.text}}</p>
+        			<p class="sentiment">Positivity Score:  {{pic.pos.score}} - {{pic.pos.type}} </p> 
         		</div>
         	</li>
         </ul>

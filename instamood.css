@@ -22,6 +22,11 @@ ul {
 	text-align: center;
 }
 
+.sentiment{
+	color:green;
+	text-align: center;
+}
+
 @media(max-width:1000px){
 	.entry{
 		width: 50%;
